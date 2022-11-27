@@ -1,4 +1,6 @@
 class StaffList {
+  staff: string[];
+
   constructor() {
     this.staff = [];
   }
