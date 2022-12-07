@@ -2,12 +2,21 @@
 // Input: 02:00:00PM
 // Output: 14:00:00
 
-const time = "02:00:00PM";
+const time = "07:00:00AM";
 
-function hourFormatByPeriod(time: string, hours: string): string | boolean {
+interface Time {
+  time: string;
+  hours: string;
+}
+
+interface Periods {
+  [key: string]: (hours: string) => false | string;
+}
+
+function hourFormatByPeriod({ time, hours }: Time): string | boolean {
   const dayPeriod = time.slice(-2);
 
-  const periods = {
+  const periods: Periods = {
     AM: () => (hours = hours.padStart(2, "0")),
     PM: () => (hours = (Number(hours) + 12).toString()),
     isTimeFormat: () => false,
@@ -23,7 +32,7 @@ function timeConverter(time: string): string | Error {
 
   if (MIDDAY_OR_MIDNIGHT) hours = "0";
 
-  const hourFormatted = hourFormatByPeriod(time, hours);
+  const hourFormatted = hourFormatByPeriod({ time, hours });
 
   return hourFormatted
     ? `${hourFormatted}:${minutes}:${seconds}`
