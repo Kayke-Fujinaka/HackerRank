@@ -1,6 +1,6 @@
-const arr = [1, 2, 3, 4, 5];
+const arrayOfNumbers = [1, 2, 3, 4, 5];
 
-const miniMaxSum = (arr) => {
+const miniMaxSum = (arr: number[]) => {
   const minValue = Math.min(...arr);
   const maxValue = Math.max(...arr);
 
@@ -9,4 +9,4 @@ const miniMaxSum = (arr) => {
   return { minValue: sumTotal - maxValue, maxValue: sumTotal - minValue };
 };
 
-console.log(miniMaxSum(arr));
+console.log(miniMaxSum(arrayOfNumbers));
