@@ -3,7 +3,7 @@
 
 const arr = [-1, -1, 0, 1, 1];
 
-function plusMinus(arr) {
+function plusMinus(arr: number[]) {
   const arrayOfIntegers = arr.reduce(
     (acc, cur) => {
       cur > 0 ? acc[2]++ : cur < 0 ? acc[0]++ : acc[1]++;
@@ -12,9 +12,9 @@ function plusMinus(arr) {
     [0, 0, 0]
   );
 
-  const proportionPositives = (arrayOfIntegers[2] / arr.length).toFixed(6);
-  const proportionNegatives = (arrayOfIntegers[0] / arr.length).toFixed(6);
-  const proportionZeros = (arrayOfIntegers[1] / arr.length).toFixed(6);
+  const proportionPositives = (arrayOfIntegers[2] / arr.length).toFixed(1);
+  const proportionNegatives = (arrayOfIntegers[0] / arr.length).toFixed(1);
+  const proportionZeros = (arrayOfIntegers[1] / arr.length).toFixed(1);
 
   return { proportionNegatives, proportionZeros, proportionPositives };
 }
