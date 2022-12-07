@@ -1,3 +1,7 @@
+//
+// Input:
+// Output:
+
 interface AddStaffMember {
   name: string;
   age: number;

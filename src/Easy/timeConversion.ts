@@ -1,4 +1,4 @@
-// It should return a new string representing the input time in 24 hour format.
+// Given a time in -hour AM/PM format, convert it to military (24-hour) time.
 // Input: 02:00:00PM
 // Output: 14:00:00
 

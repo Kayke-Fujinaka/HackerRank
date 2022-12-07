@@ -1,3 +1,14 @@
+// Write a program that prints a staircase of size n
+// Input: 6
+/* Output:
+         #
+        ##
+       ###
+      ####
+     #####
+    ######
+*/
+
 const SIZE = 4;
 
 function staircase(size: number) {
