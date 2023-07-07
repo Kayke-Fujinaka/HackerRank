@@ -4,6 +4,10 @@ const getFirstElement = (arr: number[]) => arr[1]
 console.log(getFirstElement([1, 3, 5, 7, 11]))
 
 // Linear
+const sumNumbers = (arr: number[]): number =>
+  arr.reduce((acc, cur) => acc + cur, 0)
+
+console.log(sumNumbers([1, 3, 5, 7, 11]))
 
 // Exponencial
 
