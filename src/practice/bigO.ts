@@ -10,6 +10,26 @@ const sumNumbers = (arr: number[]): number =>
 console.log('Linear:', sumNumbers([1, 3, 5, 7, 11]))
 
 // Exponencial
+// Escreva uma função que calcule todas as possíveis combinações de um conjunto de caracteres.
+function generateCombinations(str: string): string[] {
+  if (str.length === 1) {
+    return [str]
+  } else {
+    const result = []
+    for (let i = 0; i < str.length; i++) {
+      const firstChar = str[i]
+      const otherChars = str.substring(0, i) + str.substring(i + 1)
+      const otherCharsCombinations = generateCombinations(otherChars)
+
+      for (let j = 0; j < otherCharsCombinations.length; j++) {
+        result.push(firstChar + otherCharsCombinations[j])
+      }
+    }
+    return result
+  }
+}
+
+console.log(generateCombinations('abc'))
 
 // Logarítmico
 function binarySearch(arr: number[], key: number) {
