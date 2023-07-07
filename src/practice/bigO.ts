@@ -1,4 +1,7 @@
 // Constante
+const getFirstElement = (arr: number[]) => arr[1]
+
+console.log(getFirstElement([1, 3, 5, 7, 11]))
 
 // Linear
 
