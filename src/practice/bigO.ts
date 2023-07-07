@@ -1,13 +1,13 @@
 // Constante
-const getFirstElement = (arr: number[]) => arr[1]
+const getFirstElement = (arr: number[]) => arr[0]
 
-console.log(getFirstElement([1, 3, 5, 7, 11]))
+console.log('Constante:', getFirstElement([1, 3, 5, 7, 11]))
 
 // Linear
 const sumNumbers = (arr: number[]): number =>
   arr.reduce((acc, cur) => acc + cur, 0)
 
-console.log(sumNumbers([1, 3, 5, 7, 11]))
+console.log('Linear:', sumNumbers([1, 3, 5, 7, 11]))
 
 // Exponencial
 
